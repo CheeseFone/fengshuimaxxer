@@ -187,7 +187,7 @@ const SignupPage: React.FC<LoginPageProps> = ({ onLogin }) => {
         <link href='https://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet'/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       </head>
-      <body className = "login"> 
+      <body className="loginHeader"> 
         <div className = "loginbkg">
         <p className = "loginTitle">
           SIGN UP
@@ -214,10 +214,10 @@ const SignupPage: React.FC<LoginPageProps> = ({ onLogin }) => {
               /> 
         </p>
         <br></br>
-        <button className = "loginButton" onClick={handleSignupClick}>Sign Up</button>
+        <button className = "loginButton" onClick={handleSignupClick}>Sign up</button>
+        <br></br>
         <br></br>
         </div>
-
       </body>
     </div>
   );
