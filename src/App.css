@@ -1,31 +1,104 @@
-.App {
+.app {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+CSS
+selector {
+  background-image: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  border: none;
+  outline: none;
+  font-family: "Source Serif Pro";
+  width: 290px;
+  height: 35px;
+  z-index: -1;
+  padding-left: 16px;
+}
+
+.App-text {
+  font-family: "Source Serif Pro";
+  font-size: 30px;
+  background-color: transparent;
+  border-style: none;
+  border-bottom: 2px solid white;
+}
+
+.inputText {
+  border-radius: 0;
+  border-style: none;
+  background: transparent;
+  color: whitesmoke; 
+  flex-grow: 1;
+}
+
+::placeholder {
+  color: whitesmoke;
+  opacity: 1; 
+  font-size: 16px;
+  font-family: "Spinnaker";
+}
+
+.loginbkg {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid white;
+}
+
+i {
+  color:whitesmoke;
+  margin-right: 10px;
+}
+
+.loginButton {
+  background-color: whitesmoke;
+  border: 10px;
+  border-radius: 10px;
+  border-color: black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Spinnaker";
+  width: 300px;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  background-image: url('./quandale.jpeg');
+  background-size: cover;
+}
+
+.App-title {
+  color: whitesmoke;
+  font-family: "Spinnaker";
+  font-size: 30px;
+  position: relative;
 }
 
 .App-link {
-  color: #61dafb;
+  color: whitesmoke;
+  font-family: "Spinnaker";
+  font-weight: bold;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.App-fonts {
+  font-size: 15px;
+  font-family: "Spinnaker";
+  color: whitesmoke;
 }
 
 @keyframes App-logo-spin {
