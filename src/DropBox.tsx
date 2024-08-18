@@ -1,17 +1,37 @@
-import React, {useCallback, useState} from 'react'; 
-import {useDropzone} from 'react-dropzone'; 
+import React, {useCallback} from 'react'; 
+import {useDropzone, FileWithPath} from 'react-dropzone'; 
 import './ImageDropBox.css'; 
 import axios from 'axios'; 
 
 
 const DropBox = ()=> {
     
-    //hook managing things
-    const [files, setFiles] = useState<any[]>([]);
-    const [uploading, setUploading] = useState(false); 
-    const [error, setError] = useState<string | null>(null);
-    const [success, setSuccess] = useState<string | null>(null);
+    const uploadFile = async (file: File) => {
+        const formData = new FormData();
+        formData.append('image', file);
+        
+        try {
+            const response = await fetch('ill link this later', {
+                method: 'POST',
+                headers: {
+                'Authorization': 'ill insert this later'  
+                },
+                body: formData,   
+            });
+            const result = await response.json();
+            console.log('File uploaded successfully:', result);
+        }  
+        catch (error) {
+            console.error('Error uploading file:', error);
+        }
+    };
 
+    return (
+        <div> 
+        </div>
+    );
     
 }
+
+export default DropBox;
     
