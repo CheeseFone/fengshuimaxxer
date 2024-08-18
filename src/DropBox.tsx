@@ -4,37 +4,37 @@ import axios from 'axios';
 
 
 const DropBox = ()=> {
-
+    
     const uploadFile = async (file: File) => {
         const formData = new FormData();
         formData.append('image', file);
-
+        
         try {
             const response = await axios.post ('ill link this later', formData, {
                 headers: {
                     'Authorization': 'ill insert this later',
-                    'Content-Type': 'multipart/form-data'
+                    'Content-Type': 'multipart/form-data'  
                 },
             });
 
             const result = response.data;
             console.log('File uploaded successfully:', result);
-        }
+        }  
         catch (error) {
             console.error('Error uploading file:', error);
         }
     };
 
-    const onDrop = (acceptedFiles: FileWithPath[]) => {
+    const onDrop = (acceptedFiles: FileWithPath[]) => {        
         acceptedFiles.forEach(file => {
             uploadFile(file);
         });
     };
 
     const {getRootProps, getInputProps} = useDropzone ({
-        onDrop,
+        onDrop,    
     });
-
+    
     return (
         <div 
             {...getRootProps()} style={{
@@ -51,7 +51,8 @@ const DropBox = ()=> {
         </p>
     </div>
     );
-
+    
 }
 
 export default DropBox;
+    
