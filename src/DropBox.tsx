@@ -26,6 +26,15 @@ const DropBox = ()=> {
         }
     };
 
+    const onDrop = (acceptedFiles: FileWithPath[]) => {        
+        acceptedFiles.forEach(file => {
+            uploadFile(file);
+        });
+    };
+    const {getRootProps, getInputProps} = useDropzone ({
+        onDrop,         
+    });
+
     return (
         <div> 
         </div>
