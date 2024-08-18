@@ -1,6 +1,5 @@
 import React, {useCallback} from 'react'; 
 import {useDropzone, FileWithPath} from 'react-dropzone'; 
-import './ImageDropBox.css'; 
 import axios from 'axios'; 
 
 
@@ -34,10 +33,19 @@ const DropBox = ()=> {
     const {getRootProps, getInputProps} = useDropzone ({
         onDrop,         
     });
-
+    
     return (
-        <div> 
-        </div>
+        <div 
+            {...getRootProps()} style={{
+                border: '2px dashed #007bff',
+                padding: '20px',
+                textAlign: 'center',
+                borderRadius: '10px',
+                cursor: 'pointer',
+                backgroundColor: '#f8f9fa',
+            }}>
+      <input {...getInputProps()} />
+    </div>
     );
     
 }
