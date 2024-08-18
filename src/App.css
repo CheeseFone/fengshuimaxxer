@@ -1,8 +1,8 @@
 .app {
   text-align: center;
 }
-CSS
-selector {
+
+CSS selector {
   background-image: transparent;
 }
 
@@ -16,7 +16,7 @@ input {
   padding-left: 16px;
 }
 
-.App-text {
+.mainText {
   font-family: "Source Serif Pro";
   font-size: 30px;
   background-color: transparent;
@@ -24,17 +24,17 @@ input {
   border-bottom: 2px solid white;
 }
 
-.inputText {
+.loginText {
   border-radius: 0;
   border-style: none;
   background: transparent;
-  color: whitesmoke; 
+  color: whitesmoke;
   flex-grow: 1;
 }
 
 ::placeholder {
   color: whitesmoke;
-  opacity: 1; 
+  opacity: 1;
   font-size: 16px;
   font-family: "Spinnaker";
 }
@@ -43,12 +43,12 @@ input {
   background-color: transparent;
   padding: 20px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
+  /*backdrop-filter: blur(10px);*/
   border: 2px solid white;
 }
 
 i {
-  color:whitesmoke;
+  color: whitesmoke;
   margin-right: 10px;
 }
 
@@ -67,7 +67,7 @@ i {
   width: 300px;
 }
 
-.App-header {
+.loginHeader {
   background-color: white;
   min-height: 100vh;
   display: flex;
@@ -80,14 +80,14 @@ i {
   background-size: cover;
 }
 
-.App-title {
+.loginTitle {
   color: whitesmoke;
   font-family: "Spinnaker";
   font-size: 30px;
   position: relative;
 }
 
-.App-link {
+.loginLink {
   color: whitesmoke;
   font-family: "Spinnaker";
   font-weight: bold;
@@ -95,17 +95,19 @@ i {
   font-size: 15px;
 }
 
-.App-fonts {
+.loginFonts {
   font-size: 15px;
   font-family: "Spinnaker";
   color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainBackground {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./corkboard.png");
+  background-size: cover;
 }
