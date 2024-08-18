@@ -10,14 +10,14 @@ const DropBox = ()=> {
         formData.append('image', file);
         
         try {
-            const response = await fetch('ill link this later', {
-                method: 'POST',
+            const response = await axios.post ('ill link this later', formData, {
                 headers: {
-                'Authorization': 'ill insert this later'  
+                    'Authorization': 'ill insert this later',
+                    'Content-Type': 'multipart/form-data'  
                 },
-                body: formData,   
             });
-            const result = await response.json();
+
+            const result = response.data;
             console.log('File uploaded successfully:', result);
         }  
         catch (error) {
@@ -30,8 +30,9 @@ const DropBox = ()=> {
             uploadFile(file);
         });
     };
+
     const {getRootProps, getInputProps} = useDropzone ({
-        onDrop,         
+        onDrop,    
     });
     
     return (
@@ -45,6 +46,9 @@ const DropBox = ()=> {
                 backgroundColor: '#f8f9fa',
             }}>
       <input {...getInputProps()} />
+        <p>
+            file garbage
+        </p>
     </div>
     );
     
