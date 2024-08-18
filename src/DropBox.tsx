@@ -3,6 +3,8 @@ import {useDropzone, FileWithPath} from 'react-dropzone';
 import axios from 'axios'; 
 
 
+const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+
 const DropBox = ()=> {
     
     const uploadFile = async (file: File) => {
@@ -10,9 +12,9 @@ const DropBox = ()=> {
         formData.append('image', file);
         
         try {
-            const response = await axios.post ('ill link this later', formData, {
+            const response = await axios.post ('https://api.openai.com/v1/chat/completions', formData, {
                 headers: {
-                    'Authorization': 'ill insert this later',
+                    'Authorization': `Bearer ${apiKey}`,
                     'Content-Type': 'multipart/form-data'  
                 },
             });
