@@ -238,15 +238,15 @@ const AppContent: React.FC<LogoutProps> = ({onLogout}) => {
 
   return (
     <div>
-      <HoverButton onClick={handleLogoutClick}>
-        Log out
-      </HoverButton>
 
       <div className = "mainBackground">
         <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
         <div className = "mainFrame">
           <div className = "mainWorkArea"></div>
+          <HoverButton onClick={handleLogoutClick}>
+          Log out
+        </HoverButton>
           <button className = "mainButton" onClick={handleMakeClick}>m-AI-ke!</button>
         </div>
 
